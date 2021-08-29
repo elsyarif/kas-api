@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "no_akun": 720,
+      "nip": 334581,
+      "nama": "Have the name",
+      "date": "2021-09-01",
+      "attendce": {
+        "in": {
+          "waktu ": "2021-09-01 07.00.00",
+          "kondisi": "C/in",
+          "status": "Masuk"
+        },
+        "out": {
+          "waktu ": "2021-09-01 16.00.00",
+          "kondisi": "C/out",
+          "status": "Pulang"
+        }
+      },
+      "image": "/upload/img/attendce/202109010700-334581.jpeg"
+    },
+    {
+      "no_akun": 720,
+      "nip": 334582,
+      "nama": "Have the same name",
+      "date": "2021-09-01",
+      "attendce": {
+        "in": {
+          "waktu ": "2021-09-01 07.00.00",
+          "kondisi": "C/in",
+          "status": "Masuk"
+        },
+        "out": {
+          "waktu ": "",
+          "kondisi": "",
+          "status": ""
+        }
+      },
+      "image": "/upload/img/attendce/202109010700-334582.jpeg"
+    }
+  ]
+}

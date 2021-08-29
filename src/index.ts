@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import http from "http";
 import express, { Application, Request, Response } from "express";
 import * as socket from "socket.io";
@@ -7,6 +8,12 @@ import morgan from "morgan";
 import dotenv from "dotenv";
 import routes from "./routes";
 dotenv.config();
+
+import { createConnection } from "typeorm";
+
+createConnection()
+  .then(async (connection) => {})
+  .catch((error) => console.log("TypeORM connection error: ", error));
 
 const app: Application = express();
 const PORT = Number(process.env.NODE_PORT) | 5000;
@@ -23,8 +30,6 @@ app.use(routes);
 const server = http.createServer(app);
 const io = new socket.Server(server);
 
-export { io };
-
 io.on("connection", (socket) => {
   console.log("io server connected");
 
@@ -34,5 +39,5 @@ io.on("connection", (socket) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`⚡️[server]: Server is running at https://localhost:${PORT}`);
+  console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
