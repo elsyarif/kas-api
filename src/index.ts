@@ -38,6 +38,8 @@ io.on("connection", (socket) => {
   });
 });
 
+export { io };
+
 server.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
